@@ -77,6 +77,7 @@ class HomeRestController {
 		Connection conn = null;
 
 		try {
+			System.out.println("Connecting...  ");
 			String connURL="jdbc:mysql://"+env.getProperty("MYSQL_SERVICE_HOST")+":"+env.getProperty("MYSQL_SERVICE_PORT")+"/"+env.getProperty("MYSQL_DATABASE")+"?useSSL=false";
 			System.out.println("connURL:  "+connURL);
 			conn =  DriverManager.getConnection(connURL,env.getProperty("MYSQL_USER"),env.getProperty("MYSQL_PASSWORD"));
