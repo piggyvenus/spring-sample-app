@@ -80,7 +80,8 @@ class HomeRestController {
 			System.out.println("Connecting...  ");
 			String connURL="jdbc:mysql://"+env.getProperty("MYSQL_SERVICE_HOST")+":"+env.getProperty("MYSQL_SERVICE_PORT")+"/"+env.getProperty("MYSQL_DATABASE")+"?useSSL=false";
 			System.out.println("connURL:  "+connURL);
-			conn =  DriverManager.getConnection(connURL,env.getProperty("MYSQL_USER"),env.getProperty("MYSQL_PASSWORD"));
+			//conn =  DriverManager.getConnection(connURL,env.getProperty("MYSQL_USER"),env.getProperty("MYSQL_PASSWORD"));
+			conn =  DriverManager.getConnection("jdbc:mysql://mysql.rug-demo:3306/sampledb?useSSL=false");
 			//conn =  DriverManager.getConnection(env.getProperty("spring.datasource.url"),env.getProperty("spring.datasource.username"),env.getProperty("spring.datasource.password"));
                         System.out.println("connection url: "+env.getProperty("spring.datasource.url"));
 			//System.out.println("Username: "+env.getProperty("spring.datasource.username")+"\nPassword: "+env.getProperty("spring.datasource.password"));
